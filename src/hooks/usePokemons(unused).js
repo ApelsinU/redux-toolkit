@@ -1,4 +1,4 @@
-export async function usePokemons() {
+export async function usePokemonsUnused() {
   const data = await fetch(
     'https://pokeapi.co/api/v2/pokemon/?offset=20&limit=100',
   )
