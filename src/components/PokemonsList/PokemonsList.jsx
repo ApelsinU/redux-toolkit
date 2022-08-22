@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import './pokemons-list.sass'
 
 import { fetchPokemons } from '../../features/pokemons/pokemonsSlice'
@@ -8,24 +8,35 @@ import PokemonCard from '../PokemonCard/PokemonCard'
 
 export default function PokemonsList() {
   const dispatch = useDispatch()
-  const pokemons = useSelector((state) => state.pokemons.value)?.results
+  const pokemonsStore = useSelector((state) => state.pokemons.value)?.results
+
+  //const [pokemons, setPokemons] = useState([])
+
+  // useMemo(() => {
+  //   setPokemons(pokemonsStore)
+  // }, [pokemonsStore])
 
   useEffect(() => {
+    // setInterval(() => {
+    //   dispatch(fetchPokemons())
+    // }, 2000)
+    // setPokemons(pokemonsStore)
+
     dispatch(fetchPokemons())
   }, [])
 
   return (
-    <div>
+    <>
       <h2>Pokemons:</h2>
       <ul className="pokemon-list">
-        {pokemons?.length ? (
-          pokemons.map((pokemon, index) => {
+        {pokemonsStore?.length ? (
+          pokemonsStore.map((pokemon, index) => {
             return <PokemonCard key={index} pokemon={pokemon} />
           })
         ) : (
           <div>Loading...</div>
         )}
       </ul>
-    </div>
+    </>
   )
 }
