@@ -48,8 +48,7 @@ export default function Counter() {
         >
           Increment by
         </button>
-      </div>
-      <div className="counter">
+
         <button
           className="button wide"
           aria-label="Clean"
@@ -57,8 +56,7 @@ export default function Counter() {
         >
           Clean
         </button>
-      </div>
-      <div className="counter">
+
         <button
           className="button wide"
           aria-label="Increment Async"
