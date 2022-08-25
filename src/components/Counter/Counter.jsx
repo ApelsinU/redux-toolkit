@@ -8,7 +8,7 @@ import {
   incrementByAmount,
   clean,
   incrementAsync,
-} from '../../features/counter/counterSlice'
+} from '../../redux/slides/counter/counterSlice'
 
 export default function Counter() {
   const dispatch = useDispatch()
