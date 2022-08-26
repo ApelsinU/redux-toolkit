@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63a86b01-f2ea-4b0e-bba0-e85b92fa4a15" name="Changes" comment="get pokemon by name from Api">
-      <change afterPath="$PROJECT_DIR$/src/styles/reset.sass" afterDir="false" />
+    <list default="true" id="63a86b01-f2ea-4b0e-bba0-e85b92fa4a15" name="Changes" comment="refactor fetching api, small styles fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FavButton/FavButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FavButton/FavButton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FavButton/fav-button.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FavButton/fav-button.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PokemonCard/PokemonCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonCard/PokemonCard.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PokemonCard/pokemon-card.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonCard/pokemon-card.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PokemonsList/PokemonsList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonsList/PokemonsList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PokemonsList/pokemons-list.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonsList/pokemons-list.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slides/pokemons/pokemonsSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slides/pokemons/pokemonsSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MainPage/MainPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage/MainPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MainPage/main-page.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage/main-page.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/global.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/global.sass" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +85,7 @@
       <workItem from="1661164100280" duration="9782000" />
       <workItem from="1661440251061" duration="170000" />
       <workItem from="1661497264634" duration="5129000" />
-      <workItem from="1661513165785" duration="11627000" />
+      <workItem from="1661513165785" duration="12146000" />
     </task>
     <task id="LOCAL-00001" summary="configurations">
       <created>1660915987695</created>
@@ -123,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661440273590</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="refactor fetching api, small styles fixes">
+      <created>1661525510860</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1661525510860</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,7 +144,8 @@
     <MESSAGE value="api, write res from api to store, navigation" />
     <MESSAGE value="createAsyncThunk, extraReducers" />
     <MESSAGE value="get pokemon by name from Api" />
-    <option name="LAST_COMMIT_MESSAGE" value="get pokemon by name from Api" />
+    <MESSAGE value="refactor fetching api, small styles fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor fetching api, small styles fixes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
