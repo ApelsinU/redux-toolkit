@@ -1,18 +1,22 @@
 import React, { useEffect } from 'react'
 import './pokemons-list.sass'
 
-import { fetchPokemons } from '../../redux/slides/pokemons/pokemonsSlice'
+import { fetchAllPokemons } from '../../redux/slides/pokemons/pokemonsSlice'
 import { useDispatch, useSelector } from 'react-redux'
 
 import PokemonCard from '../PokemonCard/PokemonCard'
 
 export default function PokemonsList() {
   const dispatch = useDispatch()
-  const pokemonsStore = useSelector((state) => state.pokemons.list)?.results
+  const pokemonsStore = useSelector((state) => state.pokemons.pokemons)
+
+  const limit = 54
 
   useEffect(() => {
-    dispatch(fetchPokemons())
+    dispatch(fetchAllPokemons(limit))
   }, [])
+
+  console.log(pokemonsStore)
 
   return (
     <>
@@ -20,7 +24,7 @@ export default function PokemonsList() {
       <ul className="pokemon-list">
         {pokemonsStore?.length ? (
           pokemonsStore.map((pokemon, index) => (
-            <PokemonCard key={index} name={pokemon?.name} />
+            <PokemonCard key={index} pokemon={pokemon} />
           ))
         ) : (
           <div>Loading...</div>

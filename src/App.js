@@ -1,4 +1,5 @@
 import React from 'react'
+import './styles/reset.sass'
 import './styles/global.sass'
 
 import MainPage from './pages/MainPage/MainPage'

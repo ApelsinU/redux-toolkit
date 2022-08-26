@@ -1,21 +1,16 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { getApiByUrl } from '../../../api/Api'
+import { getAllPokemons, getAllPokemonsByName } from '../../../api/Api'
 
 const initialState = {
-  list: null,
-  pokemon: null,
+  pokemons: null,
 }
 
-export const fetchPokemons = createAsyncThunk(
-  'pokemons/fetchAllPokemons',
-  async () => await getApiByUrl('?offset=20&limit=2'),
-)
-
-export const fetchPokemonByName = createAsyncThunk(
-  'pokemons/fetchPokemonByName',
-  async (name) => {
-    return await getApiByUrl(name)
-  },
+export const fetchAllPokemons = createAsyncThunk(
+  'pokemons/fetchPokemonsAll',
+  async (limit) =>
+    await getAllPokemons(limit).then(
+      async (res) => await getAllPokemonsByName(res),
+    ),
 )
 
 export const PokemonsSlice = createSlice({
@@ -23,11 +18,8 @@ export const PokemonsSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchPokemons.fulfilled, (state, action) => {
-      state.list = action.payload
-    })
-    builder.addCase(fetchPokemonByName.fulfilled, (state, action) => {
-      state.pokemon = action.payload
+    builder.addCase(fetchAllPokemons.fulfilled, (state, action) => {
+      state.pokemons = action.payload
     })
   },
 })

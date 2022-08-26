@@ -1,31 +1,24 @@
-import React, { useEffect, useState, useMemo } from 'react'
+import React from 'react'
 import './pokemon-card.sass'
-import { useDispatch, useSelector } from 'react-redux'
-import { fetchPokemonByName } from '../../redux/slides/pokemons/pokemonsSlice'
+
 import { FavButton } from '../FavButton/FavButton'
 
-export default function PokemonCard({ index = null, name = null }) {
-  const pokemon = useSelector((state) => state.pokemons.pokemon)
-
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch(fetchPokemonByName(name))
-  }, [])
-
-  console.log('name', name)
-
+export default function PokemonCard({ pokemon = null }) {
   return (
-    <li className="pokemon-item" key={index}>
+    <li className="pokemon-item">
       <div className="pokemon-image">
         <FavButton />
-        <img
-          src={pokemon?.sprites?.front_shiny}
-          alt={pokemon?.name}
-          className="pokemon-logo"
-        />
+        <img src={pokemon?.sprites?.front_shiny} alt={pokemon?.name} />
       </div>
       <span className="pokemon-name">{pokemon?.name}</span>
+      <div className="pokemon-stats-block">
+        <span className="pokemon-stat-item">
+          <b>H:</b> {pokemon?.height}
+        </span>
+        <span className="pokemon-stat-item">
+          <b>W:</b> {pokemon?.weight}
+        </span>
+      </div>
     </li>
   )
 }

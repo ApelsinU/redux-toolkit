@@ -8,7 +8,11 @@ export const FavButton = () => {
   }
   return (
     <button onClick={() => onFavClick()} className="pokemon-fav">
-      {favSubsribe ? <span>&#9733;</span> : <span>&#9734;</span>}
+      {favSubsribe ? (
+        <span className="icon-subscribed">&#9733;</span>
+      ) : (
+        <span>&#9734;</span>
+      )}
     </button>
   )
 }
