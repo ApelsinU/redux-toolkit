@@ -3,8 +3,9 @@ import './styles/reset.sass'
 import './styles/global.sass'
 
 import MainPage from './pages/MainPage/MainPage'
-import ApiListPage from './pages/ApiListPage/ApiListPage'
+import PokemonsPage from './pages/PokemonsPage/PokemonsPage'
 import CounterPage from './pages/CounterPage/CounterPage'
+import TranslatePage from './pages/TranslatePage/TranslatePage'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/counter/" element={<CounterPage />} />
-        <Route path="/api-list/" element={<ApiListPage />} />
+        <Route path="/api-list/" element={<PokemonsPage />} />
+        <Route path="/api-translate/" element={<TranslatePage />} />
       </Routes>
     </Router>
   )

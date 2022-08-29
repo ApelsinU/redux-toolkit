@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { getAllPokemons, getAllPokemonsByName } from '../../../api/Api'
+import { getAllPokemons, getAllPokemonsByName } from '../../../api/PokeApi'
 
 const initialState = {
   pokemons: null,

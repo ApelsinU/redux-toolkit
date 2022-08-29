@@ -2,7 +2,7 @@ import React from 'react'
 
 import PokemonsList from '../../components/PokemonsList/PokemonsList'
 
-export default function ApiListPage() {
+export default function PokemonsPage() {
   return (
     <div className="page-wrapper">
       <div className="container">

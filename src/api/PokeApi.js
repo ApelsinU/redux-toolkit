@@ -1,16 +1,15 @@
-const BASE_URL = 'https://pokeapi.co/api/v2/pokemon/'
+/* Poke Api,
+   'https://pokeapi.co/' */
 
-// const delay = (interval) =>
-//   new Promise((resolve) => setTimeout(resolve, interval))
+import { BASE_URLS } from './baseUrls'
 
 export async function getApiByUrl(url) {
-  //await delay(1000)
-  return await fetch(BASE_URL + url).then((res) => res.json())
+  return await fetch(BASE_URLS.POKEMONS + url).then((res) => res.json())
 }
 
 export async function getAllPokemons(limit) {
-  return await fetch(BASE_URL + `?offset=0&limit=${limit}`).then((res) =>
-    res.json(),
+  return await fetch(BASE_URLS.POKEMONS + `?offset=0&limit=${limit}`).then(
+    (res) => res.json(),
   )
 }
 

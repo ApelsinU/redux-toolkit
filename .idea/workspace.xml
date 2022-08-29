@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63a86b01-f2ea-4b0e-bba0-e85b92fa4a15" name="Changes" comment="refactor fetching api, small styles fixes">
+    <list default="true" id="63a86b01-f2ea-4b0e-bba0-e85b92fa4a15" name="Changes" comment="dark theme styles">
+      <change afterPath="$PROJECT_DIR$/src/api/PokeApi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/TranslateApi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/baseUrls.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/TranslatePage/TranslatePage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/TranslatePage/translate-page.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/slides/translate/translateSlice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PokemonCard/pokemon-card.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PokemonCard/pokemon-card.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/Api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/usePokemons(unused).js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ApiListPage/ApiListPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PokemonsPage/PokemonsPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/MainPage/MainPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage/MainPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MainPage/main-page.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage/main-page.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slides/pokemons/pokemonsSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slides/pokemons/pokemonsSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/global.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/global.sass" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +50,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../projects/pool" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.selected.package.stylelint" value="C:\Users\user\WORK\myProjects\redux-toolkit\node_modules\stylelint" />
@@ -85,7 +95,8 @@
       <workItem from="1661164100280" duration="9782000" />
       <workItem from="1661440251061" duration="170000" />
       <workItem from="1661497264634" duration="5129000" />
-      <workItem from="1661513165785" duration="12146000" />
+      <workItem from="1661513165785" duration="13835000" />
+      <workItem from="1661756808068" duration="17450000" />
     </task>
     <task id="LOCAL-00001" summary="configurations">
       <created>1660915987695</created>
@@ -122,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661525510860</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="dark theme styles">
+      <created>1661525947246</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1661525947246</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,7 +163,8 @@
     <MESSAGE value="createAsyncThunk, extraReducers" />
     <MESSAGE value="get pokemon by name from Api" />
     <MESSAGE value="refactor fetching api, small styles fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor fetching api, small styles fixes" />
+    <MESSAGE value="dark theme styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="dark theme styles" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -10,7 +10,10 @@ export default function MainPage() {
             Counter
           </a>
           <a href="/api-list" className="link">
-            Api List
+            Pokemons
+          </a>
+          <a href="/api-translate" className="link">
+            Translator
           </a>
         </nav>
       </div>
