@@ -15,9 +15,4 @@ Todo:
 - create design & ui
 - check redux-persist
 
-- createEntityAdapter
-- RTK Query
-- createAction()- RTK Query
-- createAction()- RTK Query
-- createAction()- RTK Query
-- createAction()
+- add RTK Query somewere
