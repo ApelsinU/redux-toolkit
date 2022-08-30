@@ -10,7 +10,12 @@ import {
 export default function TranslatePage() {
   const dispatch = useDispatch()
   const languages = useSelector((state) => state.translate.languages)
-  const translatedText = useSelector((state) => state.translate.translation)
+  const translatedText = useSelector(
+    (state) => state.translate.translation,
+  )?.translatedText
+  const detectedLanguage = useSelector(
+    (state) => state.translate.translation,
+  )?.detectedSourceLanguage
 
   const [fromLang, setFromLang] = useState('')
   const [toLang, setToLang] = useState('')
@@ -22,10 +27,12 @@ export default function TranslatePage() {
   }, [dispatch])
 
   useEffect(() => {
-    fromLang === '' &&
-      !!languages?.length &&
-      setFromLang(languages[25]?.language)
-  }, [fromLang, languages])
+    detectedLanguage && setFromLang(detectedLanguage)
+  }, [detectedLanguage])
+
+  useEffect(() => {
+    console.log('fL', fromLang)
+  }, [fromLang])
 
   useEffect(() => {
     toLang === '' && !!languages?.length && setToLang(languages[97]?.language)
@@ -36,7 +43,6 @@ export default function TranslatePage() {
     dispatch(fetchTranslate({ fromLang, toLang, fromText }))
   }
 
-  translatedText && console.log('toText comp', translatedText)
   return (
     <div className="page-wrapper">
       <div className="container">
@@ -49,6 +55,7 @@ export default function TranslatePage() {
               value={fromLang}
               onChange={(e) => setFromLang(e.target.value)}
             >
+              <option value="">Определить язык</option>
               {!!languages?.length &&
                 languages?.map((lang) => (
                   <option key={lang?.language}>{lang?.language}</option>

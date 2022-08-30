@@ -1,9 +1,8 @@
 Stack:
 
 - React
-- Redux Toolkit
+- Redux Toolkit ( + persist)
 - Sass
-- Prettier
 
 
 Todo:
