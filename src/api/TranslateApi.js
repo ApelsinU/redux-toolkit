@@ -10,12 +10,6 @@ const apiConfig = {
   host: 'google-translate1.p.rapidapi.com',
 }
 
-// const apiConfig = {
-//   acceptEncoding: '',
-//   key: '',
-//   host: '',
-// }
-
 export async function getLanguages() {
   const options = {
     method: 'GET',
