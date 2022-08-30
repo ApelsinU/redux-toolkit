@@ -16,9 +16,10 @@ Links:
 Todo:
 
 Global
-- add sass-stylelint
-- create design & ui
 - check redux-persist
+- add TypeScript
+- create design & ui
+- add sass-stylelint
 - add RTK Query somewere
 
 Translate

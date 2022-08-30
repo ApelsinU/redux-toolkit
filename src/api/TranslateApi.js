@@ -27,7 +27,7 @@ export async function getLanguages() {
   return response?.data?.languages
 }
 
-export async function getTranslate(fromLang, toLang, fromText) {
+export async function getTranslate(fromLang = '', toLang, fromText) {
   const params = new URLSearchParams()
   params.append('q', fromText)
   params.append('source', fromLang)
@@ -44,8 +44,9 @@ export async function getTranslate(fromLang, toLang, fromText) {
     body: params,
   }
 
-  const response = await fetch(BASE_URLS.TRANSLATE, options).then((res) =>
-    res.json(),
-  )
+  const response = await fetch(BASE_URLS.TRANSLATE, options)
+    .then((res) => res.json())
+    .catch((err) => console.log('server error: ', err))
+
   return response?.data?.translations[0]
 }

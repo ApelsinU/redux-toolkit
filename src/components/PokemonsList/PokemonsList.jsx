@@ -16,8 +16,6 @@ export default function PokemonsList() {
     dispatch(fetchAllPokemons(limit))
   }, [])
 
-  console.log(pokemonsStore)
-
   return (
     <>
       <h2>Pokemons:</h2>

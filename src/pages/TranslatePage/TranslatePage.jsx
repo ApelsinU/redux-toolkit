@@ -31,16 +31,15 @@ export default function TranslatePage() {
   }, [detectedLanguage])
 
   useEffect(() => {
-    console.log('fL', fromLang)
-  }, [fromLang])
-
-  useEffect(() => {
     toLang === '' && !!languages?.length && setToLang(languages[97]?.language)
   }, [toLang, languages])
 
   function handleSubmit(e) {
     e.preventDefault()
-    dispatch(fetchTranslate({ fromLang, toLang, fromText }))
+
+    fromLang === toLang
+      ? dispatch(fetchTranslate({ toLang, fromText }))
+      : dispatch(fetchTranslate({ fromLang, toLang, fromText }))
   }
 
   return (
@@ -92,7 +91,7 @@ export default function TranslatePage() {
                 value={translatedText}
               />
             </div>
-            <button className="translation-button">Translate</button>
+            <button className="translation-button">Перевести</button>
           </form>
         </div>
       </div>
