@@ -15,6 +15,9 @@ export default function MainPage() {
           <a href="/api-translate" className="link">
             Translator
           </a>
+          <a href="/api-weather" className="link">
+            Weather
+          </a>
         </nav>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import counterReducer from './slides/counter/counterSlice'
 import pokemonsReducer from './slides/pokemons/pokemonsSlice'
 import translateReducer from './slides/translate/translateSlice'
+import weatherReducer from './slides/weather/weatherSlice'
 
 import { persistReducer } from 'redux-persist'
 import { createBlacklistFilter } from 'redux-persist-transform-filter'
@@ -23,6 +24,7 @@ const rootReducer = combineReducers({
   counter: counterReducer,
   pokemons: pokemonsReducer,
   translate: translateReducer,
+  weather: weatherReducer,
 })
 
 export default persistReducer(persistConfig, rootReducer)
