@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63a86b01-f2ea-4b0e-bba0-e85b92fa4a15" name="Changes" comment="add redux-persist, add option to detect language">
+    <list default="true" id="63a86b01-f2ea-4b0e-bba0-e85b92fa4a15" name="Changes" comment="rm comments, add .idea to .gitignore">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/TranslateApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/TranslateApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +44,7 @@
     <property name="node.js.selected.package.stylelint" value="C:\Users\user\WORK\myProjects\redux-toolkit\node_modules\stylelint" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\user\WORK\myProjects\redux-toolkit\node_modules\prettier" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -85,7 +86,7 @@
       <workItem from="1661497264634" duration="5129000" />
       <workItem from="1661513165785" duration="13835000" />
       <workItem from="1661756808068" duration="28591000" />
-      <workItem from="1661844816852" duration="1199000" />
+      <workItem from="1661844816852" duration="1892000" />
     </task>
     <task id="LOCAL-00001" summary="configurations">
       <created>1660915987695</created>
@@ -143,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661845784488</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="rm comments, add .idea to .gitignore">
+      <created>1661846074218</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1661846074218</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,7 +178,8 @@
     <MESSAGE value="Add Translate-api (demo: only switch lg and translate)" />
     <MESSAGE value="Add Google Translate Api" />
     <MESSAGE value="add redux-persist, add option to detect language" />
-    <option name="LAST_COMMIT_MESSAGE" value="add redux-persist, add option to detect language" />
+    <MESSAGE value="rm comments, add .idea to .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="rm comments, add .idea to .gitignore" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
