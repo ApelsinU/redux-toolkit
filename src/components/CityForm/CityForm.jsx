@@ -1,24 +1,33 @@
 import './city-form.sass'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { getWeatherByCity } from '../../redux/slides/weather/weatherSlice'
 import { useDispatch } from 'react-redux'
-import { setCurrentCity } from '../../redux/slides/weather/weatherSlice'
 
 export default function CityForm() {
-  const dispatch = useDispatch()
+  const [city, setCity] = useState('')
+  const navigate = useNavigate()
 
+  const dispatch = useDispatch()
   function handleSubmit(e) {
     e.preventDefault()
-    const city = e.target.city.value.toLowerCase()
 
-    dispatch(setCurrentCity(city))
+    // dispatch(getWeatherByCity(city))
 
-    // add redirection to api-weather/${Minsk}
+    navigate(`${city}`)
   }
 
   return (
     <form className="city-form" onSubmit={(e) => handleSubmit(e)}>
       <label className="city-label" htmlFor="city">
         <span>Enter your city:</span>
-        <input className="city-input" id="city" type="text" required />
+        <input
+          className="city-input"
+          id="city"
+          type="text"
+          required
+          onChange={(e) => setCity(e.target.value)}
+        />
       </label>
       <button className="city-button">Next</button>
     </form>

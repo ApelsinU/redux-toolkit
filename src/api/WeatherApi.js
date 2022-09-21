@@ -1,4 +1,4 @@
-/* Poke Api,
+/* Weather  Api,
    'https://rapidapi.com/weatherapi/api/weatherapi-com/' */
 
 import { BASE_URLS } from './baseUrls'
