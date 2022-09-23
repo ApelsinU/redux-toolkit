@@ -1,4 +1,4 @@
-import './city-form.sass'
+import './city-form.scss'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getWeatherByCity } from '../../redux/slides/weather/weatherSlice'

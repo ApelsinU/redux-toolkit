@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import './pokemons-list.sass'
+import './pokemons-list.scss'
 
 import { fetchAllPokemons } from '../../redux/slides/pokemons/pokemonsSlice'
 import { useDispatch, useSelector } from 'react-redux'

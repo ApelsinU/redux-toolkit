@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './counter.sass'
+import './counter.scss'
 
 import { useDispatch, useSelector } from 'react-redux'
 import {

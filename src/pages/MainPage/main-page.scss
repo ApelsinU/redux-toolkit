@@ -1,0 +1,24 @@
+.main-page{
+  .title {
+    color: #999;
+    font-size: 70px;
+  }
+
+  .nav {
+    display: flex;
+    gap: 10px;
+  }
+
+  .link {
+    display: block;
+    padding: 5px 10px;
+    color: #999;
+    font-size: 22px;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.city-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.city-label {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+.city-input {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  background: #e3e3e3; 
+}
+
+.city-input:focus {
+  border-color: transparent;
+}
+
+.city-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  color: #333;
+  font-size: 22px;
+  text-align: center;
+  background: #e3e3e3;
+  border: none;
+}

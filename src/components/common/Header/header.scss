@@ -1,0 +1,25 @@
+.header .header-inner {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.header .logo {
+  color: #999;
+  font-size: 18px;
+}
+
+.header .header-nav {
+  display: flex;
+  gap: 12px;
+}
+
+.header .header-link {
+  padding: 4px 12px; 
+  color: #999;
+  font-size: 18px;
+}
+
+.header .header-link:hover {
+  color: #fff;
+}

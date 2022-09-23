@@ -1,4 +1,4 @@
-import './weather-page.sass'
+import './weather-page.scss'
 
 import CityForm from '../../components/CityForm/CityForm'
 

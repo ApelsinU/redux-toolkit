@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import './translate-page.sass'
+import './translate-page.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import {
   fetchTranslate,

@@ -1,6 +1,6 @@
 import React from 'react'
-import './styles/reset.sass'
-import './styles/global.sass'
+import './styles/reset.scss'
+import './styles/global.scss'
 
 import MainPage from './pages/MainPage/MainPage'
 import PokemonsPage from './pages/PokemonsPage/PokemonsPage'

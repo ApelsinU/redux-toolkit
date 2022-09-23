@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './fav-button.sass'
+import './fav-button.scss'
 
 export const FavButton = () => {
   const [favSubsribe, setFavSubsribe] = useState(false)

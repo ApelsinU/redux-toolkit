@@ -1,5 +1,5 @@
 import React from 'react'
-import './pokemon-card.sass'
+import './pokemon-card.scss'
 
 import { FavButton } from '../FavButton/FavButton'
 

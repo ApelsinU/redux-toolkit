@@ -1,0 +1,47 @@
+.translation-header {
+  display: flex;
+  gap: 16px;
+  width: 600px;
+  margin-top: 40px; 
+}
+
+.translation-select {
+  width: 100%;
+  padding: 10px 16px;
+  text-transform: uppercase;
+  background: #d4d4d4;
+}
+
+.translation-content {
+  width: 600px;
+  margin-top: 20px;
+}
+
+.translation-areas {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.translation-area {
+  width: 292px;
+  min-height: 200px;
+  max-height: 400px;
+  padding: 10px 16px;
+  background: #d4d4d4;
+  resize: vertical;
+}
+
+.translation-area:focus {
+  outline: none;
+}
+
+.translation-button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px 16px;
+  color: #333;
+  text-transform: capitalize;
+  background: #d4d4d4;
+  border: none;
+}

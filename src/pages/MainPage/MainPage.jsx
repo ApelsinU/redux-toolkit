@@ -1,4 +1,4 @@
-import './main-page.sass'
+import './main-page.scss'
 
 export default function MainPage() {
   return (
