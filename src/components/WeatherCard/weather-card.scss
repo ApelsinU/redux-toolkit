@@ -1,3 +1,94 @@
+@import 'vars';
+
 .weather-card {
   display: flex;
+  width: 720px;
+  height: 512px;
+
+  .city-mask {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    &.minsk {
+      background-image: url('../../assets/images/cities/minsk.jpg');
+    }
+  }
+
+  .weather-card-inner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 0 28px;
+    color: #fff;
+
+    &.rain {
+      background: $bg-rain;
+    }
+
+    &.sunny {
+      background: $bg-sunny;
+    }
+  }
+
+  .left-col {
+    width: 55%;
+    padding: 20px 0 40px;
+  }
+
+  .left-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .left-weather-block {
+    margin-top: 15px;
+
+    .temperature {
+      font-weight: 100;
+      font-size: 82px;
+      line-height: 1.2;
+
+      span {
+        font-weight: 300;
+        font-size: 35px;
+        vertical-align: top;
+      }
+    }
+
+    .condition {
+      display: inline-block;
+      margin-top: 15px;
+      font-weight: 300;
+      font-size: 17px;
+      text-transform: capitalize;
+    }
+  }
+
+  .right-col {
+    width: 40%;
+    padding: 20px 30px 40px;
+    background-color: rgba(214, 214, 214, 0.15);
+
+    > * + * {
+      border-top: 2px solid rgba(255, 255, 255, 0.26);
+    }
+  }
+
+  .right-header {
+    display: flex;
+    justify-content: center;
+
+    > * + * {
+      margin-left: 11px;
+    }
+  }
+
+  .location-title {
+    color: #fff;
+    font-weight: 300;
+    font-size: 16px;
+  }
 }

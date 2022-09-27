@@ -1,4 +1,9 @@
 .title {
   color: #999;
-  font-size: 50px ;
+  font-size: 50px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
 }
