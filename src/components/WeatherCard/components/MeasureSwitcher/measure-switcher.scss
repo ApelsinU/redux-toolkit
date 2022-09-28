@@ -23,7 +23,7 @@
     align-items: center;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4), 0 0 5px rgba(0, 0, 0, 0.4);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     cursor: pointer;
     transition: 0.4s;
 
@@ -33,7 +33,7 @@
       height: 25px;
       background: rgba(255, 255, 255, 0.4);
       border-radius: 50px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4), 0 0 5px rgba(0, 0, 0, 0.4);
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
       opacity: 0.4;
       -webkit-transition: 0.4s;
       transition: 0.4s;

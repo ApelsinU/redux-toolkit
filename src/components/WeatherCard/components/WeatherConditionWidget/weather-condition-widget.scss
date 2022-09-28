@@ -1,0 +1,20 @@
+.weather-condition-widget {
+  .temperature {
+    font-weight: 100;
+    font-size: 82px;
+    line-height: 1.2;
+
+    span {
+      font-weight: 300;
+      font-size: 35px;
+      vertical-align: top;
+    }
+  }
+
+  .condition {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 16px;
+    text-transform: capitalize;
+  }
+}

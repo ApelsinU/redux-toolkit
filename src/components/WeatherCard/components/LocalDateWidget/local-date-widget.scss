@@ -1,0 +1,28 @@
+.local-date-widget {
+  .date { 
+    display: inline-block;
+    font-weight: 200;
+    font-size: 20px;
+  }
+
+  .time-block {
+    display: flex;
+    align-items: center;
+  }
+
+  .week-day {
+    margin-right: 8px;
+    font-weight: 200;
+    font-size: 18px;
+  }
+
+  .clock {
+    font-weight: 200;
+    font-size: 25px;
+
+    > * + * {
+      margin-left: 6px;
+    }
+  }
+}
+

@@ -1,11 +1,18 @@
 import './weather-card.scss'
 
 import { useSelector } from 'react-redux'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import { WeatherIcon } from './components/WeatherIcon/WeatherIcon'
 import { MeasureSwitcher } from './components/MeasureSwitcher/MeasureSwitcher'
+import { ForecastCard } from './components/ForecastCard/ForecastCard'
+import { WeatherConditionWidget } from './components/WeatherConditionWidget/WeatherConditionWidget'
+import { SunClockCard } from './components/SunClockCard/SunClockCard'
+import { LocalDateWidget } from './components/LocalDateWidget/LocalDateWidget'
+
 import { LocationIcon } from '../../assets/icons/LocationIcon'
+import { HalfSunIcon } from '../../assets/icons/HalfSunIcon'
+import { FullSunIcon } from '../../assets/icons/FullSunIcon'
 
 export const WeatherCard = () => {
   const weather = useSelector((state) => state.weather.tempCurrentWeather)
@@ -17,52 +24,7 @@ export const WeatherCard = () => {
   const weatherCondition = weather.condition.text.toLowerCase()
   const cityBg = location.region.toLowerCase()
 
-  const [temperature, setTemperature] = useState({ real: '', feels: '' })
   const [isCelsiumMeasure, setIsCelsiumMeasure] = useState(true)
-
-  useEffect(() => {
-    isCelsiumMeasure
-      ? setTemperature({ real: weather?.temp_c, feels: weather?.feelslike_c })
-      : setTemperature({ real: weather?.temp_f, feels: weather?.feelslike_f })
-  }, [weather, isCelsiumMeasure])
-
-  function parseDate(localtime) {
-    const dateStr = new Date(Date.parse(localtime))
-    console.log('dateStr', dateStr)
-
-    const allMonth = [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-      'July',
-      'August',
-      'September',
-      'October',
-      'November',
-      'December',
-    ]
-
-    const year = dateStr.getFullYear()
-    const shortYear = year.toString().slice(2, 4)
-    const month = allMonth[dateStr.getMonth()]
-    const day = dateStr.getDay()
-
-    return {
-      year,
-      shortYear,
-      month,
-      day,
-      // hour,
-      // minute,
-    }
-  }
-
-  const time = parseDate(location.localtime)
-
-  console.log('time', time)
 
   return (
     <div className="weather-card">
@@ -79,16 +41,18 @@ export const WeatherCard = () => {
                 setIsCelsiumMeasure={setIsCelsiumMeasure}
               />
             </div>
-            <div className="left-weather-block">
-              <h2 className="temperature">
-                {temperature.real}
-                <span>{isCelsiumMeasure ? ' °C' : ' °F'}</span>
-              </h2>
-              <span className="condition">
-                {weather.condition.text}, Feels like {temperature.feels}
-                <span>{isCelsiumMeasure ? ' °C' : ' °F'}</span>
-              </span>
-              <div className="date"></div>
+
+            <WeatherConditionWidget
+              isCelsiumMeasure={isCelsiumMeasure}
+              weather={weather}
+            />
+
+            <LocalDateWidget className="date-block" />
+
+            <div className="left-forecasts-block">
+              <ForecastCard />
+              <ForecastCard />
+              <ForecastCard />
             </div>
           </div>
 
@@ -98,6 +62,12 @@ export const WeatherCard = () => {
               <h3 className={'location-title'}>
                 {location.name}, {location.country}
               </h3>
+            </div>
+
+            <div className="sun-clock">
+              <SunClockCard title="Sunrise" icon={<HalfSunIcon />} />
+              <SunClockCard title="Midday" icon={<FullSunIcon />} />
+              <SunClockCard title="Sunset" icon={<HalfSunIcon />} />
             </div>
           </div>
         </div>
