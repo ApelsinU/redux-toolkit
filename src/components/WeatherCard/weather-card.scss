@@ -89,4 +89,9 @@
     justify-content: space-between;
     text-align: center;
   }
+
+  .weather-extended {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }

@@ -9,10 +9,18 @@ import { ForecastCard } from './components/ForecastCard/ForecastCard'
 import { WeatherConditionWidget } from './components/WeatherConditionWidget/WeatherConditionWidget'
 import { SunClockCard } from './components/SunClockCard/SunClockCard'
 import { LocalDateWidget } from './components/LocalDateWidget/LocalDateWidget'
+import { WeatherExtendedItem } from './components/WeatherExtendedItem/WeatherExtendedItem'
 
 import { LocationIcon } from '../../assets/icons/LocationIcon'
 import { HalfSunIcon } from '../../assets/icons/HalfSunIcon'
 import { FullSunIcon } from '../../assets/icons/FullSunIcon'
+
+import {
+  DirectionMarkerIcon,
+  HumidityIcon,
+  RainIcon,
+  WindIcon,
+} from '../../assets/icons/ExtendedWeatherIcons'
 
 export const WeatherCard = () => {
   const weather = useSelector((state) => state.weather.tempCurrentWeather)
@@ -68,6 +76,29 @@ export const WeatherCard = () => {
               <SunClockCard title="Sunrise" icon={<HalfSunIcon />} />
               <SunClockCard title="Midday" icon={<FullSunIcon />} />
               <SunClockCard title="Sunset" icon={<HalfSunIcon />} />
+            </div>
+
+            <div className="weather-extended">
+              <WeatherExtendedItem
+                title="Humidity"
+                icon={<HumidityIcon />}
+                value={weather.humidity}
+              />
+              <WeatherExtendedItem
+                title="Wind speed"
+                icon={<WindIcon />}
+                value={weather.wind_kph}
+              />
+              <WeatherExtendedItem
+                title="Rain"
+                icon={<RainIcon />}
+                value={weather.precip_mm}
+              />
+              <WeatherExtendedItem
+                title="Wind direction"
+                icon={<DirectionMarkerIcon />}
+                value={weather.wind_dir}
+              />
             </div>
           </div>
         </div>
