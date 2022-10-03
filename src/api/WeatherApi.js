@@ -29,3 +29,25 @@ export async function getRealTimeWeather(city) {
   console.log('response', response)
   return response
 }
+
+export async function getAstronomy(city) {
+  const options = {
+    method: 'GET',
+    url: BASE_URLS.WEATHER + 'astronomy.json',
+    params: { q: city },
+    headers: {
+      'X-RapidAPI-Key': apiConfig.key,
+      'X-RapidAPI-Host': apiConfig.host,
+    },
+  }
+
+  const response = axios
+    .request(options)
+    .then((res) => res.data)
+    .catch((err) =>
+      console.log('Api or server error in getAstronomy method: ', err),
+    )
+
+  console.log('response', response)
+  return response
+}

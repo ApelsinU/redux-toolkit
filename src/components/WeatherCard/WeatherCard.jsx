@@ -23,11 +23,13 @@ import {
 } from '../../assets/icons/ExtendedWeatherIcons'
 
 export const WeatherCard = () => {
-  const weather = useSelector((state) => state.weather.tempCurrentWeather)
   const location = useSelector((state) => state.weather.tempLocation)
+  const weather = useSelector((state) => state.weather.tempCurrentWeather)
+  const astronomy = useSelector((state) => state.weather.tempAstronomy)
 
-  console.log('weather', weather)
   console.log('location', location)
+  console.log('weather', weather)
+  console.log('astronomy', astronomy)
 
   const weatherCondition = weather.condition.text.toLowerCase()
   const cityBg = location.region.toLowerCase()
@@ -73,9 +75,17 @@ export const WeatherCard = () => {
             </div>
 
             <div className="sun-clock">
-              <SunClockCard title="Sunrise" icon={<HalfSunIcon />} />
-              <SunClockCard title="Midday" icon={<FullSunIcon />} />
-              <SunClockCard title="Sunset" icon={<HalfSunIcon />} />
+              <SunClockCard
+                title="Sunrise"
+                time={astronomy.sunrise}
+                icon={<HalfSunIcon />}
+              />
+              {/*<SunClockCard title="Midday"  icon={<FullSunIcon />} />*/}
+              <SunClockCard
+                title="Sunset"
+                time={astronomy.sunset}
+                icon={<HalfSunIcon />}
+              />
             </div>
 
             <div className="weather-extended">
@@ -108,13 +118,6 @@ export const WeatherCard = () => {
             </div>
           </div>
         </div>
-
-        {/*<h1 className="title">Weather for {location?.name}</h1>*/}
-        {/*<div>Last updated: {weather?.last_updated}</div>*/}
-        {/*<div>*/}
-        {/*  <img src={weather?.condition?.icon} alt="" />*/}
-        {/*  <h2>{weather?.condition?.text}</h2>*/}
-        {/*</div>*/}
       </div>
     </div>
   )

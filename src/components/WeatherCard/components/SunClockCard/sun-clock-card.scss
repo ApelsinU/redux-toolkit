@@ -2,6 +2,7 @@
   width: 70px;
 
   .title {
+    margin-bottom: 12px;
     color: #fff;
     font-weight: 300;
     font-size: 16px;
@@ -9,18 +10,16 @@
   }
 
   .card {
-    padding: 6px;
+    padding: 10px 6px 6px;
     background: rgba(255, 255, 255, 0.25);
     border-radius: 25px;
   }
 
-  .time-block > * + * {
-    margin-left: 4px;
-  }
-
   .time {
+    display: inline-block;
+    margin: 8px 0 4px;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .time-postfix {

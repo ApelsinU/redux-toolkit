@@ -1,9 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { getRealTimeWeather } from '../../../api/WeatherApi'
+import { getAstronomy, getRealTimeWeather } from '../../../api/WeatherApi'
 
 const initialState = {
   current: '',
   location: '',
+  astronomy: '',
   tempLocation: {
     name: 'Minsk',
     region: 'Minsk',
@@ -43,6 +44,14 @@ const initialState = {
     gust_mph: 19.5,
     gust_kph: 31.3,
   },
+  tempAstronomy: {
+    sunrise: '07:15 AM',
+    sunset: '06:42 PM',
+    moonrise: '04:38 PM',
+    moonset: '11:02 PM',
+    moon_phase: 'First Quarter',
+    moon_illumination: '52',
+  },
 }
 
 export const getWeatherByCity = createAsyncThunk(
@@ -50,15 +59,24 @@ export const getWeatherByCity = createAsyncThunk(
   async (city) => await getRealTimeWeather(city),
 )
 
+export const getAstronomyByCity = createAsyncThunk(
+  'weather/astronomy',
+  async (city) => await getAstronomy(city),
+)
+
 export const weatherSlice = createSlice({
   name: 'weather',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(getWeatherByCity.fulfilled, (state, action) => {
-      state.current = action.payload.current
-      state.location = action.payload.location
-    })
+    builder
+      .addCase(getWeatherByCity.fulfilled, (state, action) => {
+        state.current = action.payload.current
+        state.location = action.payload.location
+      })
+      .addCase(getAstronomyByCity.fulfilled, (state, action) => {
+        state.astronomy = action.payload.astronomy?.astro
+      })
   },
 })
 

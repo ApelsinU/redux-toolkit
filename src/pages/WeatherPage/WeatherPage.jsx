@@ -2,7 +2,10 @@ import './weather-page.scss'
 
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { getWeatherByCity } from '../../redux/slides/weather/weatherSlice'
+import {
+  getAstronomyByCity,
+  getWeatherByCity,
+} from '../../redux/slides/weather/weatherSlice'
 import { useDispatch } from 'react-redux'
 
 export default function WeatherPage() {
@@ -13,7 +16,9 @@ export default function WeatherPage() {
   function handleSubmit(e) {
     e.preventDefault()
 
+    // TODO: comennted to avoid too much API-requests while Dev
     // dispatch(getWeatherByCity(city))
+    // dispatch(getAstronomyByCity(city))
 
     navigate(`${city}`)
   }

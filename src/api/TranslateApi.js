@@ -46,7 +46,9 @@ export async function getTranslate(fromLang = '', toLang, fromText) {
 
   const response = await fetch(BASE_URLS.TRANSLATE, options)
     .then((res) => res.json())
-    .catch((err) => console.log('server error: ', err))
+    .catch((err) =>
+      console.log('Api or server error in getTranslate method: ', err),
+    )
 
   return response?.data?.translations[0]
 }

@@ -5,21 +5,22 @@ import { useParsedDate } from '../../../../hooks/useParsedDate'
 
 import { SunClockWidget } from '../SunClockWidget/SunClockWidget'
 
-export const SunClockCard = ({ title, icon }) => {
+export const SunClockCard = ({ title, icon, time }) => {
   const location = useSelector((state) => state.weather.tempLocation)
-  const { hour, minute, timePostfix } = useParsedDate(location.localtime)
+  // const { hour, minute, timePostfix } = useParsedDate(location.localtime)
 
   return (
     <div className="sun-clock-card">
       <h3 className="title">{title}</h3>
       <div className="card">
-        <SunClockWidget />
+        <SunClockWidget time={time} />
 
-        <span className="time-block">
-          <span className="time">
-            {hour}:{minute}
-          </span>
-          <span className="time-postfix">{timePostfix}</span>
+        <span className="time">
+          {/*<span className="time">*/}
+          {/*  {hour}:{minute}*/}
+          {/*</span>*/}
+          {/*<span className="time-postfix">{timePostfix}</span>*/}
+          {time}
         </span>
         {icon}
       </div>

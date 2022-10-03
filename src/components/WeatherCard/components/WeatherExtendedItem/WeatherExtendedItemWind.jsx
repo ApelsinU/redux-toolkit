@@ -5,8 +5,6 @@ export const WeatherExtendedItemWind = ({
   icon = null,
   text = null,
 }) => {
-  console.log(text.value)
-
   return (
     <div className="weather-extended-item wind-dir-item">
       <h4 className="title">{title}</h4>

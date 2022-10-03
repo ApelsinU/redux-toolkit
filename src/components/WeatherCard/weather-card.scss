@@ -3,7 +3,7 @@
 .weather-card {
   display: flex;
   width: 720px;
-  height: 512px;
+  height: 532px;
 
   .city-mask {
     width: 100%;
@@ -86,7 +86,7 @@
 
   .sun-clock {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align: center;
   }
 
