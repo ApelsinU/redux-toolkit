@@ -9,7 +9,7 @@ import { ForecastCard } from './components/ForecastCard/ForecastCard'
 import { WeatherConditionWidget } from './components/WeatherConditionWidget/WeatherConditionWidget'
 import { SunClockCard } from './components/SunClockCard/SunClockCard'
 import { LocalDateWidget } from './components/LocalDateWidget/LocalDateWidget'
-import { WeatherExtendedItem } from './components/WeatherExtendedItem/WeatherExtendedItem'
+import { WeatherExtendedItemFabric } from './components/WeatherExtendedItem'
 
 import { LocationIcon } from '../../assets/icons/LocationIcon'
 import { HalfSunIcon } from '../../assets/icons/HalfSunIcon'
@@ -79,25 +79,31 @@ export const WeatherCard = () => {
             </div>
 
             <div className="weather-extended">
-              <WeatherExtendedItem
+              <WeatherExtendedItemFabric
                 title="Humidity"
-                icon={<HumidityIcon />}
-                value={weather.humidity}
+                icon={<HumidityIcon width={12} />}
+                text={{ value: weather.humidity, postfix: '%' }}
               />
-              <WeatherExtendedItem
-                title="Wind speed"
-                icon={<WindIcon />}
-                value={weather.wind_kph}
+              <WeatherExtendedItemFabric
+                title="Wind Speed"
+                icon={<WindIcon width={30} />}
+                text={{ value: weather.wind_kph, postfix: 'km/h' }}
               />
-              <WeatherExtendedItem
-                title="Rain"
-                icon={<RainIcon />}
-                value={weather.precip_mm}
+              <WeatherExtendedItemFabric
+                title="Rain Chance"
+                icon={<RainIcon width={20} />}
+                text={{ value: weather.pressure_in, postfix: '%' }}
               />
-              <WeatherExtendedItem
-                title="Wind direction"
-                icon={<DirectionMarkerIcon />}
-                value={weather.wind_dir}
+              <WeatherExtendedItemFabric
+                title="Rain Amount"
+                icon={<RainIcon width={20} />}
+                text={{ value: weather.precip_mm, postfix: 'mm' }}
+              />
+              <WeatherExtendedItemFabric
+                name="wind_dir"
+                title="Wind Direction"
+                icon={<DirectionMarkerIcon width={45} />}
+                text={{ value: weather.wind_degree }}
               />
             </div>
           </div>

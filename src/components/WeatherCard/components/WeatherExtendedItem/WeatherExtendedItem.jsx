@@ -1,15 +1,17 @@
 import './weather-extended-item.scss'
+
 export const WeatherExtendedItem = ({
   title = '',
   icon = null,
-  value = null,
+  text = null,
 }) => {
   return (
     <div className="weather-extended-item">
       <h4 className="title">{title}</h4>
-      <div>
+      <div className="content">
         {icon && icon}
-        <span className="value">{value}</span>
+        <span className="value">{text?.value}</span>
+        <span>{text?.postfix}</span>
       </div>
     </div>
   )

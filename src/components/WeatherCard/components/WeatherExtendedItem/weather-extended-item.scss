@@ -1,10 +1,38 @@
 .weather-extended-item {
-  width: 48%;
-
   .title {
     color: #fff;
     font-weight: 300;
     font-size: 16px;
     text-align: center;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    line-height: 1.2;
+  }
+
+  .value {
+    margin: 0 2px 0 8px;
+  }
+
+  &.wind-dir-item {
+    grid-column-end: 3;
+    grid-column-start: 1;
+
+    .content {
+      position: relative;
+      height: 45px;
+      margin-top: 6px;
+      background: url('../../../../assets/images/compas.svg') no-repeat center;
+      background-size: contain;
+    }
+
+    .icon {
+      width: 45px;
+      height: 45px;
+    }
   }
 }
