@@ -1,12 +1,19 @@
 .sun-clock-widget {
-  width: 35px;
-  height: 35px;
-  margin: 0 auto;
-  background: #eaecf3;
-  border: 1px solid rgba(63, 63, 63, 0.1);
-  border-radius: 50%;
-  box-shadow: 4px 4px 10px rgba(170, 170, 170, 0.25),
-    -3px -3px 10px rgba(255, 255, 255, 0.5),
-    inset -3px -1px 5px 1px rgba(255, 255, 255, 0.5),
-    inset 2px 3px 5px -1px rgba(166, 166, 166, 0.25);
+  .bg {
+    // position: relative;
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+    background-color: #eaecf3;
+    background-image: url('../../../../assets/images/clock-layout.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 76%;
+    border: 1px solid rgba(63, 63, 63, 0.1);
+    border-radius: 50%;
+    box-shadow: 4px 4px 10px rgba(170, 170, 170, 0.25),
+      -3px -3px 10px rgba(255, 255, 255, 0.5),
+      inset -3px -1px 5px 1px rgba(255, 255, 255, 0.5),
+      inset 2px 3px 5px -1px rgba(166, 166, 166, 0.25);
+  }
 }
