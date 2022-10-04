@@ -13,7 +13,6 @@ import { WeatherExtendedItemFabric } from './components/WeatherExtendedItem'
 
 import { LocationIcon } from '../../assets/icons/LocationIcon'
 import { HalfSunIcon } from '../../assets/icons/HalfSunIcon'
-import { FullSunIcon } from '../../assets/icons/FullSunIcon'
 
 import {
   DirectionMarkerIcon,
@@ -80,7 +79,6 @@ export const WeatherCard = () => {
                 time={astronomy.sunrise}
                 icon={<HalfSunIcon />}
               />
-              {/*<SunClockCard title="Midday"  icon={<FullSunIcon />} />*/}
               <SunClockCard
                 title="Sunset"
                 time={astronomy.sunset}
