@@ -1,4 +1,12 @@
-export const ClockIcon = (props) => {
+import { SVGProps } from 'react'
+
+// interface IClockIcon {
+//   props: SVGProps<SVGSVGElement>
+//   hourAngle: number
+//   minAngle: number
+// }
+
+export const ClockIcon = ({ props, hourAngle, minAngle } /*:IClockIcon*/) => {
   return (
     <svg
       width="124"
@@ -43,7 +51,7 @@ export const ClockIcon = (props) => {
           stroke="black"
           strokeWidth="2"
           strokeLinecap="round"
-          transform={`rotate(${props.minangle} ,61, 61)`}
+          transform={`rotate(${minAngle} ,61, 61)`}
         />
         <line
           x1="60.9177"
@@ -53,7 +61,7 @@ export const ClockIcon = (props) => {
           stroke="black"
           strokeWidth="3"
           strokeLinecap="round"
-          transform={`rotate(${props.hourangle} ,61, 61)`}
+          transform={`rotate(${hourAngle} ,61, 61)`}
         />
         <path
           d="M60.9009 64.1428C62.9128 64.1428 64.5438 62.5119 64.5438 60.5C64.5438 58.4881 62.9128 56.8571 60.9009 56.8571C58.889 56.8571 57.2581 58.4881 57.2581 60.5C57.2581 62.5119 58.889 64.1428 60.9009 64.1428Z"

@@ -1,19 +1,20 @@
 import './weather-page.scss'
 
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { FormEvent, useState } from "react"
+import { useNavigate } from "react-router-dom";
 import {
   getAstronomyByCity,
-  getWeatherByCity,
-} from '../../redux/slides/weather/weatherSlice'
-import { useDispatch } from 'react-redux'
+  getWeatherByCity
+} from "../../redux/slices/weather/weatherSlice";
+import { useAppDispatch } from "../../redux/hooks";
 
 export default function WeatherPage() {
-  const [city, setCity] = useState('')
-  const navigate = useNavigate()
+  const [city, setCity] = useState("");
+  const navigate = useNavigate();
 
-  const dispatch = useDispatch()
-  function handleSubmit(e) {
+  const dispatch = useAppDispatch();
+
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
 
     // TODO: comennted to avoid too much API-requests while Dev

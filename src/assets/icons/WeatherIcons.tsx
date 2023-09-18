@@ -1,4 +1,6 @@
-export const SunIcon = (props) => {
+import { SVGProps } from "react";
+
+export const SunIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="140"
@@ -46,7 +48,7 @@ export const SunIcon = (props) => {
   )
 }
 
-export const RainIcon = (props) => {
+export const RainIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="194"

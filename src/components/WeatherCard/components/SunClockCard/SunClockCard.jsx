@@ -1,8 +1,16 @@
 import './sun-clock-card.scss'
 
 import { ClockIcon } from '../../../../assets/icons/ClockIcon'
+import { ReactElement } from 'react'
 
-export const SunClockCard = ({ title, icon, time }) => {
+// interface ISunClockCard {
+//   title: string
+//   icon: ReactElement
+//   time: string
+// }
+
+export const SunClockCard = ({ title, icon, time } /*:ISunClockCard*/) => {
+  console.log('time', typeof time)
   const hourAngle = time?.split(':')[0] * 30
   const minAngle = time?.split(':')[1].split(' ')[0] * 6
 
@@ -13,8 +21,8 @@ export const SunClockCard = ({ title, icon, time }) => {
         <ClockIcon
           width={78}
           height={78}
-          hourangle={hourAngle}
-          minangle={minAngle}
+          hourAngle={hourAngle}
+          minAngle={minAngle}
         />
         <span className="time">{time}</span>
         {icon}

@@ -2,15 +2,17 @@
    'https://rapidapi.com/weatherapi/api/weatherapi-com/' */
 
 import { BASE_URLS } from './baseUrls'
+import { AxiosResponse } from 'axios'
+import { ICurrentWeatherData, IAstronomyData } from './types'
 
-const axios = require('axios')
+import axios from 'axios'
 
 const apiConfig = {
   key: '26a5cbfb1emsh871bd0752be0c9bp11d50djsnbdaeba273ce9',
   host: 'weatherapi-com.p.rapidapi.com',
 }
 
-export async function getRealTimeWeather(city) {
+export async function getRealTimeWeather(city: string) {
   const options = {
     method: 'GET',
     url: BASE_URLS.WEATHER + 'current.json',
@@ -23,14 +25,16 @@ export async function getRealTimeWeather(city) {
 
   const response = axios
     .request(options)
-    .then((res) => res.data)
-    .catch((err) => console.log('server error: ', err))
+    .then((res: AxiosResponse<ICurrentWeatherData>) => res.data)
+    .catch((err: any) =>
+      console.log('Api or server error in getRealTimeWeather method: ', err),
+    )
 
   console.log('response', response)
   return response
 }
 
-export async function getAstronomy(city) {
+export async function getAstronomy(city: string): Promise<IAstronomyData> {
   const options = {
     method: 'GET',
     url: BASE_URLS.WEATHER + 'astronomy.json',
@@ -43,7 +47,7 @@ export async function getAstronomy(city) {
 
   const response = axios
     .request(options)
-    .then((res) => res.data)
+    .then((res: AxiosResponse) => res.data)
     .catch((err) =>
       console.log('Api or server error in getAstronomy method: ', err),
     )

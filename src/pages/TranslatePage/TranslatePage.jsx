@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import {
   fetchTranslate,
   fetchLanguages,
-} from '../../redux/slides/translate/translateSlice'
+} from '../../redux/slices/translate/translateSlice'
 
 export default function TranslatePage() {
   const dispatch = useDispatch()

@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import './pokemons-list.scss'
 
-import { fetchAllPokemons } from '../../redux/slides/pokemons/pokemonsSlice'
+import { fetchAllPokemons } from '../../redux/slices/pokemons/pokemonsSlice'
+
 import { useDispatch, useSelector } from 'react-redux'
 
 import PokemonCard from '../PokemonCard/PokemonCard'

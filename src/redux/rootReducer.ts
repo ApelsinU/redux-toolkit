@@ -1,7 +1,7 @@
-import counterReducer from './slides/counter/counterSlice'
-import pokemonsReducer from './slides/pokemons/pokemonsSlice'
-import translateReducer from './slides/translate/translateSlice'
-import weatherReducer from './slides/weather/weatherSlice'
+import counterReducer from './slices/counter/counterSlice'
+import pokemonsReducer from './slices/pokemons/pokemonsSlice'
+import translateReducer from './slices/translate/translateSlice'
+import weatherReducer from './slices/weather/weatherSlice'
 
 import { persistReducer } from 'redux-persist'
 import { createBlacklistFilter } from 'redux-persist-transform-filter'

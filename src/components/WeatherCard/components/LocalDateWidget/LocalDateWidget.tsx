@@ -1,9 +1,9 @@
 import './local-date-widget.scss'
 import { useParsedDate } from '../../../../hooks/useParsedDate'
-import { useSelector } from 'react-redux'
+import { useAppSelector } from '../../../../redux/hooks'
 
-export const LocalDateWidget = ({ className }) => {
-  const location = useSelector((state) => state.weather.tempLocation)
+export const LocalDateWidget = ({ className }: {className: string} ) => {
+  const location = useAppSelector((state) => state.weather.tempLocation)
 
   const {
     day,

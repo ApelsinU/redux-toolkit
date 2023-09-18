@@ -1,6 +1,5 @@
 import './weather-card.scss'
 
-import { useSelector } from 'react-redux'
 import { useState } from 'react'
 
 import { WeatherIcon } from './components/WeatherIcon/WeatherIcon'
@@ -9,7 +8,7 @@ import { ForecastCard } from './components/ForecastCard/ForecastCard'
 import { WeatherConditionWidget } from './components/WeatherConditionWidget/WeatherConditionWidget'
 import { SunClockCard } from './components/SunClockCard/SunClockCard'
 import { LocalDateWidget } from './components/LocalDateWidget/LocalDateWidget'
-import { WeatherExtendedItemFabric } from './components/WeatherExtendedItem'
+import { WeatherExtendedFabric } from './components/WeatherExtendedItem/WeatherExtendedFabric'
 
 import { LocationIcon } from '../../assets/icons/LocationIcon'
 import { HalfSunIcon } from '../../assets/icons/HalfSunIcon'
@@ -21,10 +20,12 @@ import {
   WindIcon,
 } from '../../assets/icons/ExtendedWeatherIcons'
 
+import { useAppSelector } from '../../redux/hooks'
+
 export const WeatherCard = () => {
-  const location = useSelector((state) => state.weather.tempLocation)
-  const weather = useSelector((state) => state.weather.tempCurrentWeather)
-  const astronomy = useSelector((state) => state.weather.tempAstronomy)
+  const location = useAppSelector((state) => state.weather.tempLocation)
+  const weather = useAppSelector((state) => state.weather.tempCurrentWeather)
+  const astronomy = useAppSelector((state) => state.weather.tempAstronomy)
 
   console.log('location', location)
   console.log('weather', weather)
@@ -33,7 +34,7 @@ export const WeatherCard = () => {
   const weatherCondition = weather.condition.text.toLowerCase()
   const cityBg = location.region.toLowerCase()
 
-  const [isCelsiumMeasure, setIsCelsiumMeasure] = useState(true)
+  const [isCelsiusMeasure, setIsCelsiusMeasure] = useState(true)
 
   return (
     <div className="weather-card">
@@ -46,13 +47,13 @@ export const WeatherCard = () => {
                 weather={weatherCondition}
               />
               <MeasureSwitcher
-                isCelsiumMeasure={isCelsiumMeasure}
-                setIsCelsiumMeasure={setIsCelsiumMeasure}
+                isCelsiusMeasure={isCelsiusMeasure}
+                setIsCelsiusMeasure={setIsCelsiusMeasure}
               />
             </div>
 
             <WeatherConditionWidget
-              isCelsiumMeasure={isCelsiumMeasure}
+              isCelsiusMeasure={isCelsiusMeasure}
               weather={weather}
             />
 
@@ -87,27 +88,27 @@ export const WeatherCard = () => {
             </div>
 
             <div className="weather-extended">
-              <WeatherExtendedItemFabric
+              <WeatherExtendedFabric
                 title="Humidity"
                 icon={<HumidityIcon width={12} />}
                 text={{ value: weather.humidity, postfix: '%' }}
               />
-              <WeatherExtendedItemFabric
+              <WeatherExtendedFabric
                 title="Wind Speed"
                 icon={<WindIcon width={30} />}
                 text={{ value: weather.wind_kph, postfix: 'km/h' }}
               />
-              <WeatherExtendedItemFabric
+              <WeatherExtendedFabric
                 title="Rain Chance"
                 icon={<RainIcon width={20} />}
                 text={{ value: weather.pressure_in, postfix: '%' }}
               />
-              <WeatherExtendedItemFabric
+              <WeatherExtendedFabric
                 title="Rain Amount"
                 icon={<RainIcon width={20} />}
                 text={{ value: weather.precip_mm, postfix: 'mm' }}
               />
-              <WeatherExtendedItemFabric
+              <WeatherExtendedFabric
                 name="wind_dir"
                 title="Wind Direction"
                 icon={<DirectionMarkerIcon width={45} />}
